@@ -1,7 +1,7 @@
 update users
    set deleted_at=now(), deleted_by_guid = created_by_guid
  where deleted_at is null
-   and email like '%@test.apidoc.me';
+   and (email like '%@test.apidoc.me' or email like '%@test.apibuilder.io');
 
 update organizations
    set deleted_at=now(), deleted_by_guid = created_by_guid

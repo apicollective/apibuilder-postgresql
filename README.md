@@ -1,8 +1,8 @@
-# apidoc-postgresql
+# apibuilder-postgresql
 
 ## Running latest version in docker
 
-    docker run -d -p 5432:5432 mbryzek/apidoc-postgresql:latest
+    docker run -d -p 5432:5432 flowcommerce/apibuilder-postgresql:latest
 
 ## Setup locally
 
