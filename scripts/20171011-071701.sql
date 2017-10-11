@@ -1,0 +1,4 @@
+drop index organization_domain_domain_not_deleted_un_idx;
+
+create unique index organization_domains_organization_guid_domain_not_deleted_un_idx on
+  organization_domains(organization_guid, domain) where deleted_at is null;
