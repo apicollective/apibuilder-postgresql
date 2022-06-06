@@ -5,6 +5,7 @@ WORKDIR /opt/schema
 
 RUN service postgresql start && \
     ./install.sh && \
+    psql -U api -f /opt/schema/setup-test-data.sql apibuilderdb && \
     service postgresql stop
 
 USER "postgres"
