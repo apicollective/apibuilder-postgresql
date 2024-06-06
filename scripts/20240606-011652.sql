@@ -14,7 +14,7 @@ create table tasks (
   data                        json not null,
   created_at                  timestamptz not null default timezone('utc'::text, now())::timestamptz,
   updated_at                  timestamptz not null default timezone('utc'::text, now())::timestamptz,
-  updated_by_user_id          text not null check(util.non_empty_trimmed_string(updated_by_user_id)),
+  updated_by_guid             text not null check(util.non_empty_trimmed_string(updated_by_guid)),
   hash_code                   bigint not null,
   unique(type_id, type)
 );
