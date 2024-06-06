@@ -6,7 +6,7 @@ create table tasks (
   id                          text primary key check(util.non_empty_trimmed_string(id)),
   type                        text not null check(util.non_empty_trimmed_string(type)),
   type_id                     text not null check(util.non_empty_trimmed_string(type_id)),
-  organization_guid           text check(util.null_or_non_empty_trimmed_string(organization_guid)),
+  organization_guid           uuid,
   num_attempts                bigint not null check(num_attempts >= 0),
   next_attempt_at             timestamptz not null,
   errors                      json,
