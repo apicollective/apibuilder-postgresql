@@ -1,0 +1,5 @@
+drop trigger organizations_prevent_delete_trigger on organizations;
+drop trigger memberships_prevent_delete_trigger on memberships;
+drop trigger membership_requests_prevent_delete_trigger on membership_requests;
+drop trigger versions_prevent_delete_trigger on versions;
+drop trigger tokens_prevent_delete_trigger on tokens;
