@@ -1,4 +1,4 @@
-FROM flowdocker/postgresql:latest
+FROM flowcommerce/postgresql:latest
 
 ADD . /opt/schema
 WORKDIR /opt/schema
